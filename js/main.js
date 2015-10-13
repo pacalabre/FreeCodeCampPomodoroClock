@@ -40,8 +40,8 @@ $(document).ready(function(){
     }
   }
 
-   //start counter
-   $('#startButton').mousedown(function(){
+  //start counter
+  $('#startButton').mousedown(function(){
     counter();
   });
 
