@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Kreon:700);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+.mins {
+  font-size: 200px;
+  font-family: source code pro;
+}
+
+.secs {
+  font-size: 100px;
+  margin-top: -2em;
+  margin-left: .8em;
+  font-family: source code pro;
+}
+
+.counter {
+  margin-left: 40%;
+  font-family: kreon;
+}
