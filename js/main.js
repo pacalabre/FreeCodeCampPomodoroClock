@@ -24,7 +24,8 @@ $(document).ready(function(){
   var counter = function countdown() {
     secs-=1;
     setTimeout(countdown,1000);
-
+    document.getElementById("mins").innerHTML = mins;
+    document.getElementById("secs").innerHTML = secs;
     console.log(mins);
     console.log(secs);
 
@@ -44,5 +45,9 @@ $(document).ready(function(){
   $('#startButton').mousedown(function(){
     counter();
   });
+
+  // print mins and seconds to the page
+  document.getElementById("mins").innerHTML = mins;
+
 
 });
