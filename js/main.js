@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var mins = 25;
   var secs = 1;
+  var startClicked = 0;
 
  // print mins
   document.getElementById("mins").innerHTML = mins;
@@ -81,6 +82,11 @@ $(document).ready(function() {
 
   //start counter
   $('#startButton').mousedown(function(){
-    counter();
+
+    startClicked ++;
+    if(startClicked === 1) {
+      console.log(startClicked);
+      counter();
+    }
   });
 });
