@@ -1,19 +1,54 @@
-@import url(https://fonts.googleapis.com/css?family=Kreon:700);
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+@import url(https://fonts.googleapis.com/css?family=Nunito:300);
+@import url(https://fonts.googleapis.com/css?family=Oswald:300);
+
+body {
+  background-color: #001233;
+}
+
+.title {
+  font-size: 50px;
+  font-family: oswald;
+  color: white;
+  margin-left: 36%
+}
 
 .mins {
+  color: white;
   font-size: 200px;
-  font-family: source code pro;
+  font-family: oswald;
 }
 
 .secs {
+  color: white;
   font-size: 100px;
-  margin-top: -2em;
-  margin-left: .8em;
-  font-family: source code pro;
+  margin-top: -2.5em;
+  margin-left: .85em;
+  font-family: oswald;
+  height: 150px;
 }
 
 .counter {
+  margin-top: -15em;
   margin-left: 40%;
-  font-family: kreon;
+  font-family: ;
 }
+
+.start-and-reset {
+  font-family: oswald;
+  font-size: 25px;
+  color: black;
+  background-color: white;
+  padding:10px;
+  margin-top: -1em;
+}
+
+.buttons {
+  margin-left: 40%;
+  margin-top: -6em;
+}
+
+.increments-of-five {
+  padding: 5px;
+}
+
+
