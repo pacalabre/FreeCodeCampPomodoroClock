@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
   var mins = 25;
   var secs = 1;
 
@@ -21,20 +21,24 @@ $(document).ready(function(){
   //add five mins to counter
   function plusFive() {
     mins = mins+5;
+    document.getElementById("mins").innerHTML = mins;
   }
 
   //minus five mins to counter
   function minusFive() {
     mins = mins-5;
+    document.getElementById("mins").innerHTML = mins;
   }
 
-   function test() {
+  function test() {
     mins = 0;
     secs = 5;
   }
+
   $('#test').mousedown(function(){
     test();
   })
+
   // if reset button is pressed, reset the clock
   $('#resetButton').mousedown(function(){
     reset();
@@ -63,7 +67,7 @@ $(document).ready(function(){
     }
 
     // if mins reach 0 -- sound alarms
-    if (secs == 0 && mins == 0) {
+    if (secs === 0 && mins === 0) {
           playButton1();
           stopTime();
         }
@@ -74,7 +78,6 @@ $(document).ready(function(){
       mins-=1;
       }
   }
-
 
   //start counter
   $('#startButton').mousedown(function(){
