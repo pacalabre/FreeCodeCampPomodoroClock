@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito:300);
-@import url(https://fonts.googleapis.com/css?family=Oswald:300);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
 
 body {
   background-color: #001233;
@@ -8,6 +8,7 @@ body {
 .title {
   font-size: 50px;
   font-family: oswald;
+  font-weight: lighter;
   color: white;
   margin-left: 36%
 }
@@ -16,6 +17,7 @@ body {
   color: white;
   font-size: 200px;
   font-family: oswald;
+  font-weight: lighter;
 }
 
 .secs {
@@ -24,6 +26,7 @@ body {
   margin-top: -2.5em;
   margin-left: .85em;
   font-family: oswald;
+  font-weight: lighter;
   height: 150px;
 }
 

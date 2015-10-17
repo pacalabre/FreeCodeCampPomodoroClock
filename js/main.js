@@ -2,6 +2,9 @@ $(document).ready(function(){
   var mins = 25;
   var secs = 1;
 
+ // print mins
+  document.getElementById("mins").innerHTML = mins;
+
   //play sound
   function playButton1() {
     var audioButton = new Audio();
@@ -15,9 +18,35 @@ $(document).ready(function(){
     secs = 1;
   }
 
+  //add five mins to counter
+  function plusFive() {
+    mins = mins+5;
+  }
+
+  //minus five mins to counter
+  function minusFive() {
+    mins = mins-5;
+  }
+   function test() {
+    mins = 0;
+    secs = 5;
+  }
+  $('#test').mousedown(function(){
+    test();
+  })
   // if reset button is pressed, reset the clock
   $('#resetButton').mousedown(function(){
     reset();
+  })
+
+  //if plusFive button is pressed, add five mins
+  $('#plusFive').mousedown(function(){
+    plusFive();
+  })
+
+  //if minusFive button is pressed, subtract five mins
+  $('#minusFive').mousedown(function(){
+    minusFive();
   })
 
   //counter
@@ -29,25 +58,22 @@ $(document).ready(function(){
     console.log(mins);
     console.log(secs);
 
+    // if mins reach 0 -- sound alarms
+    if (secs == 0 && mins == 0) {
+          playButton1();
+        }
+
     // if seconds reach 0 -- reset secs to 60 and subtract a minute
     if (secs === 0) {
       secs = 60;
       mins-=1;
       }
-
-    // if mins reach 0 -- sound alarms
-    if (secs === 0 && mins === 0) {
-      playButton1();
-    }
   }
+
+
 
   //start counter
   $('#startButton').mousedown(function(){
     counter();
   });
-
-  // print mins and seconds to the page
-  document.getElementById("mins").innerHTML = mins;
-
-
 });
