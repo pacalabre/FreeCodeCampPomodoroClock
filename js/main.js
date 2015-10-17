@@ -27,6 +27,7 @@ $(document).ready(function(){
   function minusFive() {
     mins = mins-5;
   }
+
    function test() {
     mins = 0;
     secs = 5;
@@ -52,15 +53,19 @@ $(document).ready(function(){
   //counter
   var counter = function countdown() {
     secs-=1;
-    setTimeout(countdown,1000);
+    var startTime = setTimeout(countdown,1000);
     document.getElementById("mins").innerHTML = mins;
     document.getElementById("secs").innerHTML = secs;
-    console.log(mins);
-    console.log(secs);
+
+    //timeout secs
+    function stopTime() {
+      clearTimeout(startTime);
+    }
 
     // if mins reach 0 -- sound alarms
     if (secs == 0 && mins == 0) {
           playButton1();
+          stopTime();
         }
 
     // if seconds reach 0 -- reset secs to 60 and subtract a minute
@@ -69,7 +74,6 @@ $(document).ready(function(){
       mins-=1;
       }
   }
-
 
 
   //start counter
