@@ -1,16 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito:300);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(https://fonts.googleapis.com/css?family=Monoton);
 
 body {
   background-color: #001233;
 }
 
 .title {
-  font-size: 50px;
-  font-family: oswald;
-  font-weight: lighter;
+  font-size: 70px;
+  font-family: Monoton;
   color: white;
-  margin-left: 36%
+  margin-left: 17%
 }
 
 .mins {

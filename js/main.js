@@ -17,7 +17,8 @@ $(document).ready(function() {
   function reset() {
     mins = 25;
     secs = 1;
-    startClicked +=2;
+    startClicked = 0;
+    document.getElementById("mins").innerHTML = mins;
   }
 
   //add five mins to counter
@@ -37,13 +38,16 @@ $(document).ready(function() {
     secs = 5;
   }
 
+  /*
+  //test button to start counter at 5 secs
   $('#test').mousedown(function(){
     test();
   })
+  */
 
   // if reset button is pressed, reset the clock
   $('#resetButton').mousedown(function(){
-    reset();
+        reset();
   })
 
   //if plusFive button is pressed, add five mins
@@ -55,6 +59,15 @@ $(document).ready(function() {
   $('#minusFive').mousedown(function(){
     minusFive();
   })
+
+  //start counter
+  $('#startButton').mousedown(function(){
+    startClicked ++;
+    //if start button has been clicked more than once, do not implement multiple instances of counter at once
+    if(startClicked === 1) {
+      counter();
+    }
+  });
 
   //counter
   var counter = function countdown() {
@@ -80,19 +93,15 @@ $(document).ready(function() {
       mins-=1;
       }
 
-    //if reset button is clicked stop counter
-    if (startClicked > 1) {
+      // if time is less than 0, counter stops and gets set to 0
+    if (mins < 0){
       stopTime();
+      mins = 0;
+      secs = 0;
+      document.getElementById("mins").innerHTML = mins;
+      document.getElementById("secs").innerHTML = secs;
+      stopTime();
+      playButton1();
     }
   }
-
-  //start counter
-  $('#startButton').mousedown(function(){
-
-    startClicked ++;
-    if(startClicked === 1) {
-      console.log(startClicked);
-      counter();
-    }
-  });
 });
