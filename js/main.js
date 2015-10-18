@@ -17,7 +17,7 @@ $(document).ready(function() {
   function reset() {
     mins = 25;
     secs = 1;
-    startClicked = 0;
+    startClicked = 1;
     document.getElementById("mins").innerHTML = mins;
   }
 
