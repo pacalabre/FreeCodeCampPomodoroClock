@@ -49,6 +49,7 @@ $(document).ready(function() {
   $('#resetButton').mousedown(function(){
         reset();
   })
+  //document.getElementById('resetButton').onMouse
 
   //if plusFive button is pressed, add five mins
   $('#plusFive').mousedown(function(){
