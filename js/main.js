@@ -1,4 +1,3 @@
-$(document).ready(function() {
   var mins = 25;
   var secs = 1;
   var startClicked = 0;
@@ -46,29 +45,34 @@ $(document).ready(function() {
   */
 
   // if reset button is pressed, reset the clock
-  $('#resetButton').mousedown(function(){
-        reset();
-  })
+
+    document.getElementById("resetButton").onclick = function resetClock() {
+      reset();
+    }
+
   //document.getElementById('resetButton').onMouse
 
   //if plusFive button is pressed, add five mins
-  $('#plusFive').mousedown(function(){
+
+  document.getElementById("plusFive").onclick = function addFive() {
     plusFive();
-  })
+  }
 
   //if minusFive button is pressed, subtract five mins
-  $('#minusFive').mousedown(function(){
+
+  document.getElementById("minusFive").onclick = function subtractFive() {
     minusFive();
-  })
+  }
 
   //start counter
-  $('#startButton').mousedown(function(){
+
+  document.getElementById("startButton").onclick = function startClock() {
     startClicked ++;
     //if start button has been clicked more than once, do not implement multiple instances of counter at once
     if(startClicked === 1) {
       counter();
     }
-  });
+  };
 
   //counter
   var counter = function countdown() {
@@ -105,4 +109,4 @@ $(document).ready(function() {
       playButton1();
     }
   }
-});
+
